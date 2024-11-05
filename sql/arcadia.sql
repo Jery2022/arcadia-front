@@ -1,0 +1,17 @@
+CREATE DATABASE IF NOT EXISTS ejyr_zoo_arcadia;
+
+USE ejyr_zoo_arcadia;
+
+CREATE  TABLE IF NOT EXISTS users (
+  users_id INT AUTO_INCREMENT PRIMARY KEY,
+  username VARCHAR(50) NOT NULL UNIQUE,
+  password VARCHAR(255) NOT NULL,
+  nom VARCHAR(50) NOT NULL,
+  prenom VARCHAR(50) NOT NULL,
+);
+
+CREATE  TABLE IF NOT EXISTS services (
+  service_id INT AUTO_INCREMENT PRIMARY KEY,
+  nom VARCHAR(50) NOT NULL,
+  description TEXT NOT NULL,
+);

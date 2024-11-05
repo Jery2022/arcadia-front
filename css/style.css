@@ -1,0 +1,26 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .hero {
+    background: url('hero-image.jpg') no-repeat center center/cover;
+    height: 60vh;
+    color: white;
+  }
+  
+  .navbar-nav .nav-link {
+    color: #3a3a3a;
+  }
+  
+  footer {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  footer .social-icons img {
+    width: 24px;
+  }
+  

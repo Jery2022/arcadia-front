@@ -1,0 +1,24 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"sqltools.connections": [
+			{
+				"mysqlOptions": {
+					"authProtocol": "default",
+					"enableSsl": "Disabled"
+				},
+				"previewLimit": 50,
+				"server": "mysql-ejyr.alwaysdata.net",
+				"port": 3306,
+				"driver": "MariaDB",
+				"name": "Zoo_Arcadia",
+				"database": "ejyr_zoo_arcadia",
+				"username": "ejyr_admin_arcad"
+			}
+		]
+	}
+}

@@ -1,0 +1,18 @@
+{
+    "name": "jewom/arcadia-front",
+    "description": "Site d'information et de gestion d'un zoo animalier",
+    "type": "project",
+    "require": {
+        "phpmailer/phpmailer": "^6.9"
+    },
+    "autoload": {
+        "psr-4": {
+            "Jewom\\ArcadiaFront\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "EJYR"
+        }
+    ]
+}

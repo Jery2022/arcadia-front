@@ -7,7 +7,7 @@
   <title>ZOO ARCADIA</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="./src/css/style.css">
-  <link rel="stylesheet" href="./src/css/animals.css">
+  <link rel="stylesheet" href="./src/css/galerie.css">
 </head>
 <body>
 
@@ -22,7 +22,7 @@
           <ul class="navbar-nav">
             <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
             <li class="nav-item"><a class="nav-link" href="about.html">À Propos</a></li>
-            <li class="nav-item"><a class="nav-link" href="animals.html">Nos Animaux</a></li>
+            <li class="nav-item"><a class="nav-link" href="galerie.html">Nos Animaux</a></li>
             <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
           </ul>
         </div>
@@ -32,119 +32,87 @@
 
   <main class="container">
     <h2>Galérie de nos Animaux</h2><br>
-    <!-- 
     <div id="myBtnContainer">
-      <button class="btn-animals active" onclick="filterSelection('all')"> Voir tout</button>
-      <button class="btn-animals" onclick="filterSelection('plumes')">A plumes</button>
-      <button class="btn-animals" onclick="filterSelection('poils')">A poils</button>
-      <button class="btn-animals" onclick="filterSelection('ecailles')">A écailles</button>
-      <button class="btn-animals" onclick="filterSelection('autres')">Autres</button>
-    </div>
--->
-    <div id="myBtnContainer">
-      <button class="btn-animals active" data-filter="all">Tout</button>
-      <button class="btn-animals" data-filter="plumes">A plumes</button>
-      <button class="btn-animals" data-filter="poils">A poils</button>
-      <button class="btn-animals" data-filter="ecailles">A écailles</button>
-      <button class="btn-animals" data-filter="autres">Autres</button>
+      <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+      <button class="btn" onclick="filterSelection('nature')"> Nature</button>
+      <button class="btn" onclick="filterSelection('cars')"> Cars</button>
+      <button class="btn" onclick="filterSelection('people')"> People</button>
     </div>
 
-    <hr>
-    <!-- Début de la galérie de photos des animaux -->
-    <div class="gallery">
-      <div class="plumes show-animals">
-        <div class="content-animals">
-          <img src="/w3images/mountains.jpg" alt="plumes" style="width:100%">
+    <!-- Gallery Grid -->
+    <div class="row">
+      <div class="column nature">
+        <div class="content">
+          <img src="/w3images/mountains.jpg" alt="Mountains" style="width:100%">
           <h4>Mountains</h4>
           <p>Lorem ipsum dolor..</p>
         </div>
       </div>
-      <div class="plumes show-animals">
-        <div class="content-animals">
-        <img src="/w3images/lights.jpg" alt="plumes" style="width:100%">
+      <div class="column nature">
+        <div class="content">
+        <img src="/w3images/lights.jpg" alt="Lights" style="width:100%">
           <h4>Lights</h4>
           <p>Lorem ipsum dolor..</p>
         </div>
       </div>
-      <div class="plumes show-animals">
-        <div class="content-animals">
-        <img src="/w3images/nature.jpg" alt="plumes" style="width:100%">
+      <div class="column nature">
+        <div class="content">
+        <img src="/w3images/nature.jpg" alt="Nature" style="width:100%">
           <h4>Forest</h4>
           <p>Lorem ipsum dolor..</p>
         </div>
       </div>
       
-      <div class="column-animals poils">
-        <div class="content-animals">
-          <img src="/w3images/cars1.jpg" alt="poils" style="width:100%">
+      <div class="column cars">
+        <div class="content">
+          <img src="/w3images/cars1.jpg" alt="Car" style="width:100%">
           <h4>Retro</h4>
           <p>Lorem ipsum dolor..</p>
         </div>
       </div>
-      <div class="column-animals poils">
-        <div class="content-animals">
-        <img src="/w3images/cars2.jpg" alt="poils" style="width:100%">
+      <div class="column cars">
+        <div class="content">
+        <img src="/w3images/cars2.jpg" alt="Car" style="width:100%">
           <h4>Fast</h4>
           <p>Lorem ipsum dolor..</p>
         </div>
       </div>
-      <div class="column-animals poils">
-        <div class="content-animals">
-        <img src="/w3images/cars3.jpg" alt="poils" style="width:100%">
+      <div class="column cars">
+        <div class="content">
+        <img src="/w3images/cars3.jpg" alt="Car" style="width:100%">
           <h4>Classic</h4>
           <p>Lorem ipsum dolor..</p>
         </div>
       </div>
 
-      <div class="column-animals ecailles">
-        <div class="content-animals">
-          <img src="/w3images/people1.jpg" alt="ecailles" style="width:100%">
+      <div class="column people">
+        <div class="content">
+          <img src="/w3images/people1.jpg" alt="Car" style="width:100%">
           <h4>Girl</h4>
           <p>Lorem ipsum dolor..</p>
         </div>
       </div>
-      <div class="column-animals ecailles">
-        <div class="content-animals">
-        <img src="/w3images/people2.jpg" alt="ecailles" style="width:100%">
+      <div class="column people">
+        <div class="content">
+        <img src="/w3images/people2.jpg" alt="Car" style="width:100%">
           <h4>Man</h4>
           <p>Lorem ipsum dolor..</p>
         </div>
       </div>
-      <div class="column-animals ecailles">
-        <div class="content-animals">
-        <img src="/w3images/people3.jpg" alt="ecailles" style="width:100%">
+      <div class="column people">
+        <div class="content">
+        <img src="/w3images/people3.jpg" alt="Car" style="width:100%">
           <h4>Woman</h4>
           <p>Lorem ipsum dolor..</p>
         </div>
       </div>
-      <div class="column-animals autres">
-        <div class="content-animals">
-          <img src="/w3images/people1.jpg" alt="Autres" style="width:100%">
-          <h4>Girl</h4>
-          <p>Lorem ipsum dolor..</p>
-        </div>
-      </div>
-      <div class="column-animals autres">
-        <div class="content-animals">
-        <img src="/w3images/people2.jpg" alt="Autres" style="width:100%">
-          <h4>Man</h4>
-          <p>Lorem ipsum dolor..</p>
-        </div>
-      </div>
-      <div class="column-animals autres">
-        <div class="content-animals">
-        <img src="/w3images/people3.jpg" alt="Autres" style="width:100%">
-          <h4>Woman</h4>
-          <p>Lorem ipsum dolor..</p>
-        </div>
-      </div>
-    <!-- Fin de la GRID -->
+    <!-- END GRID -->
     </div>
 
-    <!-- Fin de MAIN -->
+    <!-- END MAIN -->
     </div>
   </main>
-
+  
   <footer>
     <div class="container text-center bg-light text-dark p-3 mt-4">
       <p>&copy; 2024 ZOO ARCADIA. Tous droits réservés.</p>
@@ -166,3 +134,4 @@
   <script src="./src/js/main.js"></script>   
 </body>
 </html>
+

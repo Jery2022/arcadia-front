@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -5,11 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ZOO ARCADIA</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="./src/css/style.css">
 </head>
 <body>
-  <header class="container bg-light text-dark p-3 mb-4">
-    <div class="container-fluid">
+
+  <header class="container-fluid container-header bg-light text-dark p-3 mb-4">
+    <div class="container-fluid ">
       <nav class="navbar navbar-expand-lg navbar-light">
         <a class="navbar-brand" href="#">ZA</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -19,8 +21,9 @@
           <ul class="navbar-nav">
             <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
             <li class="nav-item"><a class="nav-link" href="about.html">À Propos</a></li>
-            <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-            <li class="nav-item"><a class="nav-link" href="animals.html">Nos Animaux</a></li>
+            <li class="nav-item"><a class="nav-link" href="services.html">Nos Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="habitats.html">Nos Habitats</a></li>
+            <li class="nav-item"><a class="nav-link" href="galerie.html">Nos Animaux</a></li>
             <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
           </ul>
         </div>
@@ -85,7 +88,7 @@
     <section class="hero-image">
       <div class="hero-text">
         <h2>Bienvenue au ZOO ARCADIA</h2>
-        <p>Où la nature rencontre l'innovation verte</p>
+        <p class="fs-4">Où la nature rencontre l'innovation verte</p>
         <button class="hero-button bg-gradient">En savoir plus ...</button>
       </div>
     </section>
@@ -104,8 +107,8 @@
     </section>
     <!-- Section galérie des photos et descriptions courtes pour les animaux du Zoo -->
     <section class="container text-center bg-light py-5 mt-5">
-        <h3 class="display-4">Nos Animaux</h3>
-        <p>Rencontrez nos résidents à plumes, à poils et à écailles.</p><br>
+        <h3 class="display-4 text-body-emphasis lh-1 fw-bold">Nos Animaux</h3>
+        <p class="fs-4">Rencontrez nos résidents à plumes, à poils et à écailles.</p><br>
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
           <div class="col">
             <div class="card shadow-sm">
@@ -126,15 +129,17 @@
     </section>
     <!-- Section galérie relative aux services du Zoo -->
     <section class="container text-center bg-light py-5 mt-5">
-        <h3 class="display-4 mt-5">Nos Services</h3>
-        <p>Connaitre nos différents services.</p>
-         <div>
-            <p> Nos services contribuent à faire du zoo Arcadia un lieu d'éducation, 
+        <h3 class="display-4 text-body-emphasis lh-1 fw-bold mt-5" >Nos Services</h3>
+        <p class="fs-4">Connaitre nos principaux services.</p>
+        <div class="row py-lg-5">
+          <div class="col-lg-6 col-md-8 mx-auto">
+            <h1 class="fw-light">Idée de services</h1>
+            <p class="lead text-body-secondary">Nos services contribuent à faire du zoo Arcadia un lieu d'éducation, 
               de conservation et de divertissement, tout en veillant au bien-être 
               des animaux.</p>
-         </div>
+          </div>
+        </div>
          <div class="container px-4 py-5" id="featured-3">
-    <!--      <h2 class="pb-2 border-bottom">Columns with icons</h2>  -->
             <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
               <div class="feature col">
                 <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
@@ -215,7 +220,7 @@
     <!-- Section des habitats du Zoo -->
 
     <section class="container text-center bg-light py-5 mt-5">
-        <h3 class="display-4 mt-5">Les habitats dans le ZOO</h3>
+        <h3 class="display-4 text-body-emphasis lh-1 fw-bold mt-5" >Les habitats dans le ZOO</h3>
         <p>Où trouver nos animaux.</p><br>
         <div class="container marketing">
           <div class="row featurette">
@@ -224,7 +229,7 @@
               <p class="lead">Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p>
             </div>
             <div class="col-md-5 p-0 overflow-hidden shadow-lg rounded-2">
-              <img src="images/habitat1-arcadia.jpeg" alt="habitat" width="100%" height="100%"  >
+              <img src="./src/images/habitat1-arcadia.jpeg" alt="habitat" width="100%" height="100%"  >
             </div>
           </div>
 
@@ -236,7 +241,7 @@
               <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.</p>
             </div>
             <div class="col-md-5 order-md-1 p-0 overflow-hidden shadow-lg rounded-2">
-              <img src="images/habitat2-arcadia.jpeg" alt="habitat" width="100%" height="100%"  >
+              <img src="./src/images/habitat2-arcadia.jpeg" alt="habitat" width="100%" height="100%"  >
             </div>
           </div>
 
@@ -248,7 +253,7 @@
               <p class="lead">Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p>
             </div>
             <div class="col-md-5 p-0 overflow-hidden shadow-lg rounded-2">
-              <img  src="images/habitat1-arcadia.jpeg" alt="habitat" width="100%" height="100%" >
+              <img  src="./src/images/habitat1-arcadia.jpeg" alt="habitat" width="100%" height="100%" >
             </div>
           </div>
         </div>
@@ -257,8 +262,8 @@
 
      <!-- Section sur les initiatives ecologiques du Zoo -->
     <section class="container text-center bg-light py-5 mt-5">
-      <h3 class="display-4 mt-5">Nos Initiatives Écologiques</h3>
-      <p>Découvrez nos efforts pour un avenir plus vert.</p>
+      <h3 class="display-4 text-body-emphasis lh-1 fw-bold mt-5">Nos Initiatives Écologiques</h3>
+      <p class="fs-4">Découvrez nos efforts pour un avenir plus vert.</p>
       <!-- Ajouter des icônes et descriptions -->
 
       <div class="container my-5">
@@ -278,33 +283,33 @@
        <div class="row featurette">
           <div class="card-container">
               <div class="card">
-                <img src="images/eco-initiative1.jpeg" alt="eco-initiative" width="30" height="30">
+                <img src="./src/images/eco-initiative1.jpeg" alt="eco-initiative" width="30" height="30">
                 <h3>Recyclage</h3>
                 <p>Le zoo recycle les déchets pour réduire les déchets et préserver l'environnement.</p>
               </div>
               <div class="card">
-                <img src="images/eco-initiative2.jpeg" alt="eco-initiative" width="30" height="30">
+                <img src="./src/images/eco-initiative2.jpeg" alt="eco-initiative" width="30" height="30">
                 <h3>Énergie Solaire</h3>
                 <p>Le zoo utilise l'énergie solaire pour réduire sa consommation d'énergie et ses émissions de carbone.</p>
               </div>
               <div class="card">
-                <img src="images/eco-initiative3.jpeg" alt="eco-initiative" width="30" height="30">
+                <img src="./src/images/eco-initiative3.jpeg" alt="eco-initiative" width="30" height="30">
                 <h3>Conservation de l'eau</h3>
                 <p>Le zoo recycle l'eau pour arroser les plantes et les enclos des animaux.</p>
               </div>
               <div class="card">
-                <img src="images/eco-initiative3.jpeg" alt="eco-initiative" width="30" height="30">
+                <img src="./src/images/eco-initiative3.jpeg" alt="eco-initiative" width="30" height="30">
                 <h3>Bénévolat et Ecovolontariat </h3>
                 <p>Le zoo organise des programmes de bénévolat ou d'écovolontariat sur les enjeux environnementaux.</p>
               </div>
               <div class="card">
-                <img src="images/eco-initiative5.jpeg" alt="eco-initiative" width="30" height="30">
+                <img src="./src/images/eco-initiative5.jpeg" alt="eco-initiative" width="30" height="30">
                 <h3>Innovations Écologiques </h3>
                 <p>Le zoo utilise des solutions comme les systèmes de purification d'eau utilisant des plantes ou des matériaux 
                   biodégradables en remplacement du plastique.</p>
               </div>
               <div class="card">
-                <img src="images/eco-initiative6.jpeg" alt="eco-initiative" width="30" height="30">
+                <img src="./src/images/eco-initiative6.jpeg" alt="eco-initiative" width="30" height="30">
                 <h3>Mode de Consommation</h3>
                 <p>Le zoo a adopté un mode de consommation responsable, comme choisir des produits 
                   locaux et durables, contribuant à réduire l'empreinte écologique.</p>
@@ -315,8 +320,8 @@
 
      <!-- Section sur les statistiques du Zoo -->
     <section class="container text-center bg-light py-5  mt-5">
-      <h3 class="display-3 mt-5">Impact Environnemental</h3>
-      <p>Suivez nos économies d'énergie en temps réel.</p>
+      <h3 class="display-4 text-body-emphasis lh-1 fw-bold mt-5" >Impact Environnemental</h3>
+      <p class="fs-4">Suivez nos économies d'énergie en temps réel.</p>
         <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg m-5">
           <div class="row-stats">
             <div class="column-stats">
@@ -356,8 +361,8 @@
 
      <!-- Section galérie des avis des visiteurs du Zoo -->
     <section class="container text-center bg-light py-5 mt-5">
-      <h3 class="display-4 mt-5">Votre avis compte</h3>
-      <p>Donnez-nous votre opinion à la fin de votre visite.</p>
+      <h3 class="display-4 text-body-emphasis lh-1 fw-bold mt-5" >Votre avis compte</h3>
+      <p class="fs-4">Donnez-nous votre opinion à la fin de votre visite.</p>
 
       <!-- Testimonials slider: Style 1 -->
       <div class="position-relative px-sm-5">
@@ -459,20 +464,16 @@
           <div class="col-md-10 mx-auto col-lg-6">
             <form class="p-4 p-md-5 border rounded-3 bg-body-tertiary">
               <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="floatingNom" placeholder="Nom">
-                <label for="floatingNom">Nom</label>
+                <input type="text" class="form-control" id="floatingInput" placeholder="name">
+                <label for="floatingInput">Nom :</label>
               </div>
               <div class="form-floating mb-3">
                 <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                <label for="floatingInput">Email address</label>
+                <label for="floatingInput">Email :</label>
               </div>
               <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="floatingText" placeholder="Text">
-                <label for="floatingText">Objet</label>
-              </div>
-              <div class="form-floating mb-3">
-                <input type="textarea" class="form-control" id="floatingTextarea" rows="5" cols="10" placeholder="textarea">
-                <label for="floatingTextarea">Message</label>
+                <textarea class="form-control" id="floatingTextarea" placeholder="commentaire" rows="4"></textarea>
+                <label for="floatingTextarea">Commentaire :</label>
               </div>
               <button class="w-100 btn btn-lg btn-primary" type="submit">Envoyer</button>
               <hr class="my-4">
@@ -488,9 +489,9 @@
     <div class="container text-center bg-light text-dark p-3 mt-4">
       <p>&copy; 2024 ZOO ARCADIA. Tous droits réservés.</p>
       <div class="social-icons">
-        <a href="#" class="me-2"><img src="./icones/facebook-icon.svg" width="50px" height="50px" alt="Facebook"></a>
-        <a href="#" class="me-2"><img src="./icones/twitterX.svg" width="50px" height="50px"  alt="Twitter"></a>
-        <a href="#" class="me-2"><img src="./icones/instagram-icon.png" width="30px" height="30px"  alt="Instagram"></a>
+        <a href="#" class="me-2"><img src="./src/icones/facebook-icon.svg" width="50px" height="50px" alt="Facebook"></a>
+        <a href="#" class="me-2"><img src="./src/icones/twitterX.svg" width="50px" height="50px"  alt="Twitter"></a>
+        <a href="#" class="me-2"><img src="./src/icones/instagram-icon.png" width="30px" height="30px"  alt="Instagram"></a>
       </div>
     </div>
     <div class="container text-light py-5">
@@ -502,6 +503,6 @@
     </div>
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
-  <script src="js/main.js"></script>   
+  <script src="./src/js/main.js"></script>   
 </body>
 </html>

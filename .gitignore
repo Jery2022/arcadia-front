@@ -1,0 +1,5 @@
+/vendor/
+/img-test/
+/include_html/
+
+test*.*

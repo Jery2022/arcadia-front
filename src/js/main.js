@@ -103,3 +103,44 @@ for (var i = 0; i < btns.length; i++) {
     this.className += " active";
   });
 }
+
+
+// Code pour changer dynamiquement le focus du menu actif lorsque l'on clique sur le lien d'un élément de menu
+// Sélectionner tous les liens du menu
+/*
+const navLinks = document.querySelectorAll('navbar-nav .nav-item');
+
+// Ajouter un écouteur d'événements pour chaque lien
+navLinks.forEach(link => {
+    link.addEventListener('click', function() {
+        // Supprimer la classe 'active' de tous les éléments de menu
+        navLinks.forEach(item => item.parentElement.classList.remove('active'));
+        
+        // Ajouter la classe 'active' à l'élément de menu cliqué
+        this.parentElement.classList.add('active');
+    });
+});
+*/
+
+// Sélectionner tous les liens du menu
+const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+
+// Ajouter un écouteur d'événements pour chaque lien
+navLinks.forEach(link => {
+    link.addEventListener('click', function(event) {
+        // Empêcher le comportement par défaut du lien
+        event.preventDefault();
+
+        // Supprimer la classe 'active' de tous les éléments de menu
+        navLinks.forEach(item => item.parentElement.classList.remove('active'));
+        
+        // Ajouter la classe 'active' à l'élément de menu cliqué
+        this.parentElement.classList.add('active');
+
+        // Optionnel : rediriger vers la page liée après un court délai
+        setTimeout(() => {
+            window.location.href = this.href;
+        }, 200); // Délai de 200 ms pour permettre à l'animation de se produire
+    });
+});
+

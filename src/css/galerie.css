@@ -2,18 +2,6 @@
   box-sizing: border-box;
 }
 
-body {
-  background-color: #f1f1f1;
-  padding: 20px;
-  font-family: Arial;
-}
-
-/* Center website */
-.main {
-  max-width: 1000px;
-  margin: auto;
-}
-
 h1 {
   font-size: 50px;
   word-break: break-all;
@@ -70,4 +58,48 @@ h1 {
 .btn.active {
   background-color: #666;
   color: white;
+}
+
+/* Animated Search Form - Expandable */
+
+.btn-search {
+  border: none;
+  outline: none;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  background-image: url('../icones/icons8-search-48A.png');
+  background-repeat: no-repeat;
+  background-color: #efefef;
+
+}
+
+.btn-search:hover {
+  background-image: url('../icones/icons8-search-48Z.png');
+  background-repeat: no-repeat;
+  /*trasition */
+  transition: 0.5s;
+}
+
+.btn-search.active {
+  background-color: #666;
+}
+
+input[type=text] {
+  width: 200px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+ 
+  padding: 12px 20px 12px 12px;
+
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+
+/* When the input field gets focus, change its width to 100% */
+input[type=text]:focus {
+  width: 50%;
 }

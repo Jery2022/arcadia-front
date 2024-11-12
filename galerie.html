@@ -14,14 +14,16 @@
   <header class="container-fluid container-header bg-light text-dark p-3 mb-4">
     <div class="container-fluid ">
       <nav class="navbar navbar-expand-lg navbar-light">
-        <a class="navbar-brand" href="#">ZA</a>
+        <a class="navbar-brand" href="#">Zoo Arcadia</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
-            <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+            <li class="nav-item active"><a class="nav-link" href="index.html">Accueil</a></li>
             <li class="nav-item"><a class="nav-link" href="about.html">À Propos</a></li>
+            <li class="nav-item"><a class="nav-link" href="services.html">Nos Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="habitats.html">Nos Habitats</a></li>
             <li class="nav-item"><a class="nav-link" href="galerie.html">Nos Animaux</a></li>
             <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
           </ul>
@@ -32,12 +34,18 @@
 
   <main class="container">
     <h2>Galérie de nos Animaux</h2><br>
-    <div id="myBtnContainer">
-      <button class="btn active" onclick="filterSelection('all')"> Show all</button>
-      <button class="btn" onclick="filterSelection('nature')"> Nature</button>
-      <button class="btn" onclick="filterSelection('cars')"> Cars</button>
-      <button class="btn" onclick="filterSelection('people')"> People</button>
-    </div>
+    <div class="d-flex justify-content-between align-items-center" >
+      <div id="myBtnContainer">
+        <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+        <button class="btn" onclick="filterSelection('nature')"> Nature</button>
+        <button class="btn" onclick="filterSelection('cars')"> Cars</button>
+        <button class="btn" onclick="filterSelection('people')"> People</button>
+      </div>
+      <div class="d-flex justify-content-between align-items-center" >
+        <input type="text" name="search" placeholder="Search..">
+        <button class="btn-search" onclick="search()"></button>
+      </div>
+   </div>
 
     <!-- Gallery Grid -->
     <div class="row">

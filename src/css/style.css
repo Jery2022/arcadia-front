@@ -66,6 +66,29 @@ body {
     margin-right: 20px;
   }
 
+  /* Style de base pour les liens du menu */
+.nav-link {
+  text-decoration: none; /* Supprime le soulignement par défaut */
+  transition: color 0.3s ease, border-bottom 0.3s ease; /* Transition douce pour la couleur et la bordure */
+  padding-bottom: 2px; /* Ajoute un espace en bas du lien */
+}
+
+/* Surlignement au survol */
+.nav-link:hover {
+  border-bottom: 4px solid #008000; /* Ajoute un soulignement au survol */
+  color: #008000; /* Change la couleur au survol */
+}
+
+/* Style pour le menu actif */
+.nav-item.active .nav-link {
+  font-weight: 800; /* Met le texte en gras pour le menu actif */
+  color: #008000; /* Change la couleur du lien actif */
+  border-bottom: 4px solid #008000; /* Ajoute une bordure en bas pour le focus */
+  transition: border-bottom 0.3s ease; /* Transition pour la bordure */
+}
+
+
+
   /* The card */
 
   .card-container {

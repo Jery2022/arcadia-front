@@ -6,7 +6,7 @@
   <title>ZOO ARCADIA</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="./src/css/style.css">
-  <link rel="stylesheet" href="./src/css/about.css">
+  <link rel="stylesheet" href="./src/css/habitat.css">
 </head>
 <body>
 
@@ -22,7 +22,7 @@
                 <li class="nav-item active"><a class="nav-link" href="index.html">Accueil</a></li>
                 <li class="nav-item"><a class="nav-link" href="about.html">À Propos</a></li>
                 <li class="nav-item"><a class="nav-link" href="services.html">Nos Services</a></li>
-                <li class="nav-item"><a class="nav-link" href="habitats.html">Nos Habitats</a></li>
+                <li class="nav-item"><a class="nav-link" href="habitat.html">Nos Habitats</a></li>
                 <li class="nav-item"><a class="nav-link" href="galerie.html">Nos Animaux</a></li>
                 <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
               </ul>
@@ -30,39 +30,35 @@
           </nav>
         </div>
       </header>
-       
+   <main>
 <!-- Section galérie relative aux habitats du Zoo -->
 <section class="mt-5 text-center">
     <h3 class="display-4 text-body-emphasis lh-1 fw-bold">A l'aventure en visitant les habitants</h3>
     <p class="fs-4"> Le zoo Arcadia s'efforce de recréer des environnements naturels pour le bien-être des animaux 
         et l'enrichissement des visites</p><br>
-    <div class="card-container">
-        <div class="card-about">
-            <img src="./src/images/personne/photo-dg.jpg" alt="Directeur" style="width:100%">
-            <div class="container">
-                <h4><b>John Doe</b></h4>
-                <p>Directeur</p>
-            </div>
+    <h2>Où trouver nos animaux</h2><br>
+    <div class="filter-container m-3" >
+        <select id="sort">
+            <option value="name">Trier par nom</option>
+            <option value="type">Trier par type</option>
+        </select>
+        <div class="filters-input"> 
+            <input type="text" id="search" placeholder="Rechercher...">
         </div>
-        <div class="card-about">
-            <img src="./src/images/personne/photo-secretaire.png" alt="Secrétaire" style="width:100%">
-            <div class="container-about">
-            <h4><b>Jeanne Patricks</b></h4>
-            <p>Secrétaire</p>
-            </div>
-        </div>
-        <div class="card-about">
-            <img src="./src/images/personne/photo-homme.webp" alt="Guide" style="width:100%">
-            <div class="container">
-            <h4><b>Bill War</b></h4>
-            <p>Guide</p>
-            </div>
-        </div>
+    </div>
+        
+    <div class="container-habitat">
+      <div id="card-container" class="card-container m-3"></div>
+    
+        <div id="pagination-container" class="pagination-container m-3 p-3">
+          <button class="pagination-btn" id="prev" disabled>Précédent</button>
+          <span class="pagination" id="page-count"></span>
+          <button class="pagination-btn" id="next">Suivant</button>
+      </div>
     </div>
 </section>
 </main>
-
-
+<!-- Footer -->
   <footer>
     <div class="container text-center bg-light text-dark p-3 mt-4">
       <p>&copy; 2024 ZOO ARCADIA. Tous droits réservés.</p>

@@ -1,0 +1,32 @@
+{
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default",
+                "enableSsl": "Disabled"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3306,
+            "driver": "MariaDB",
+            "name": "Arcadia",
+            "database": "ejyr_zoo_arcadia",
+            "username": "root",
+            "password": ""
+        },
+        {
+            "mysqlOptions": {
+                "authProtocol": "default",
+                "enableSsl": "Disabled"
+            },
+            "previewLimit": 50,
+            "server": "mysql-ejyr.alwaysdata.net",
+            "port": 3306,
+            "driver": "MySQL",
+            "name": "Arcadia-alwawsdata",
+            "database": "ejyr_zoo_arcadia",
+            "username": "ejyr_admin_arcad",
+            "askForPassword": true
+        }
+    ]
+}

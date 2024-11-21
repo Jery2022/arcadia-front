@@ -11,6 +11,32 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
+// Code pour pour afficher la page apropos à partir du bouton "En savoir plus"
+function afficherPageApropos() {
+            window.location.href = "../../public/about.html"; // Remplacez par l'URL de votre page
+          }
+
+// code pour afficher en accordéon des informations sur les services
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    /* Toggle between adding and removing the "active" class,
+    to highlight the button that controls the panel */
+    this.classList.toggle("active");
+
+    /* Toggle between hiding and showing the active panel */
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+
+
 
 // Code pour les statistiques interactives
 document.addEventListener('DOMContentLoaded', function() {
@@ -89,43 +115,43 @@ navLinks.forEach(link => {
   
     // Jeux de données pour créer les cartes
     const data = [
-      { name: 'Savane africaine', type: 'savane', image: 'savane.jpg', description: '...' },
-      { name: 'Savane africaine', type: 'savane', image: 'savane.jpg', description: '...' },
-      { name: 'Savane africaine', type: 'savane', image: 'savane.jpg', description: '...' },
-      { name: 'Marais d\'Annel', type: 'marais', image: 'marais.jpg', description: '...' },
-      { name: 'Marais d\'Annel', type: 'marais', image: 'marais.jpg', description: '...' },
-      { name: 'Marais d\'Annel', type: 'marais', image: 'marais.jpg', description: '...' },
-      { name: 'Forêt amazonienne', type: 'foret', image: 'foret.jpg', description: '...' },
-      { name: 'Montagne', type: 'montagne', image: 'montagne.jpg', description: '...' },
-      { name: 'Montagne', type: 'montagne', image: 'montagne.jpg', description: '...' },
-      { name: 'Montagne', type: 'montagne', image: 'montagne.jpg', description: '...' },
-      { name: 'Forêt amazonienne', type: 'foret', image: 'foret.jpg', description: '...' },
-      { name: 'Batiment A', type: 'cage', image: 'cage.jpg', description: '...' },
-      { name: 'Batiment B', type: 'enclot', image: 'enclot.jpg', description: '...' },
-      { name: 'Piscine 1', type: 'aquatique', image: 'piscine-1.jpg', description: '...' },
-      { name: 'Piscine 2', type: 'aquatique', image: 'piscine-2.jpg', description: '...' },
-      // ... ajoutez d'autres cartes ici
+      { name: 'Savane Alsa', type: 'Savane', image: '../src/assets/images/habitats/habitat-savane-2.jpeg', description: "Cet habitat est caractérisé par des prairies ouvertes et des arbres épars, où l'on peut trouver des animaux comme les lions, les éléphants et les girafes. Les enclos sont souvent conçus pour simuler les vastes espaces de la savane africaine" },
+      { name: 'Marais d\'Annel', type: 'Marais', image: '../src/assets/images/habitats/habitais-marais-3.jpeg', description: "L'habitat aquatique est idéal pour les animaux amphibies et aquatiques, tels que les grenouilles, les crocodiles et certaines espèces d'oiseaux. Il se caractérise par des zones humides avec des étangs et des rivières pour reproduire ces écosystèmes." },
+      { name: 'Forêt Darnien', type: 'Jungle', image: '../src/assets/images/habitats/habitat-foret-1.jpeg', description: " Les habitats de jungle imitent les forêts tropicales denses, offrant un environnement riche en végétation. On y trouve des espèces comme les singes, les oiseaux tropicaux et les reptiles, qui bénéficient de la couverture végétale et des structures verticales" },
+      { name: 'Montagne', type: 'Montagne', image: '../src/assets/images/habitats/habitat-cage-aigles.jpeg', description: "Le zoo inclue des habitats montagneux, où l'on peut observer des animaux adaptés à des altitudes élevées, comme les chèvres de montagne et les léopards des neiges" },
+      { name: 'Batiment Cantini', type: 'Cage', image: '../src/assets/images/habitats/habitat-cage.jpeg', description: "Le zoo inclue des habitats montagneux, où l'on peut observer des animaux adaptés à des altitudes élevées, comme les chèvres de montagne et les léopards des neiges" },
+      { name: 'Espace Aubervilier', type: 'Enclos', image: '../src/assets/images/habitats/habitat-enclot-1.jpeg', description: "L'enclos du zoo présente un espace vaste et verdoyant, entouré de clôtures naturelles pour imiter l'habitat d'origine des animaux. Des rochers, des arbres et des zones d'ombre offrent refuge et stimulation. On y trouve souvent des lions, zèbres, signes, flamants." },
+      { name: 'Etang Chambort', type: 'Aquatique', image: '../src/assets/images/habitats/habitat-marais-1.jpeg', description: "Le marais du zoo est un écosystème fascinant, où l'eau douce s'entrelace avec des espaces verdoyants. Des plantes aquatiques, comme des nénuphars et des joncs, poussent le long des rives, créant un habitat idéal. Les visiteurs peuvent y observer des cigognes, grenouilles, tortues, crocodiles" },
+      { name: 'Chambord', type: 'Plaine', image: '../src/assets/images/habitats/habitat-savane-1.jpeg', description: "L'habitat de plaine se caractérise par de vastes étendues de terrain plat, souvent recouvertes de prairies, de champs et de zones herbeuses. Les animaux qui y vivent, comme les zèbres, coyotes, antiloppes, faucons, gazèlle et les antilopes, ont besoin d'espace pour se déplacer et se nourrir" },
+      { name: 'Aquaruim Rigobert', type: 'Aquatique', image: '../src/assets/images/habitats/habitat-marais-1.jpeg', description: "L'habitat de plaine se caractérise par de vastes étendues de terrain plat, souvent recouvertes de prairies, de champs et de zones herbeuses. Les animaux qui y vivent, comme les zèbres, coyotes, antiloppes, faucons, gazèlle et les antilopes, ont besoin d'espace pour se déplacer et se nourrir" },
   ];
 
   const animalsDatas = [
-    { prenom: 'Médor', race: 'chien', image: 'chien.jpg', habitat: 'enclot' },
-    { prenom: 'Titi', race: 'lion', image: 'lion-savane.jpg', habitat: 'savane' },
-    { prenom: 'Loulou', race: 'caniche', image: 'caniche.jpg', habitat: 'enclot' },
-    { prenom: 'Pati', race: 'ours', image: 'ours-brun.jpg', habita: 'foret' },
-    { prenom: 'Tong', race: 'dauphin', image: 'dauphin.jpg', habita: 'aquatique' },
-    { prenom: 'Bari', race: 'elephant', image: 'elephant.jpg', habita: 'savane' },
-    { prenom: 'Robin', race: 'tigre', image: 'tigre.jpg', habita: 'savane' },
-    { prenom: 'Matou', race: 'zebre', image: 'zebre.jpg', habitat: 'savane' },
-    { prenom: 'Poireau', race: 'crocodile', image: 'crocodile-marais.jpg', habitat: 'marais' },
-    { prenom: 'Binera', race: 'montagne', image: 'montagne.jpg', habitat: '...' },
-    { prenom: 'Croc-blanc', type: 'foret', image: 'foret.jpg', habitat: '...' },
-    { prenom: 'Chanteuse des marais', type: 'grenouille', image: 'grenouille-marais.jpg', habitat: 'marais' },
-    { prenom: 'Albatros', type: 'heron', image: 'heron-marais.jpg', habitat: 'marais' },
-    // ... ajoutez d'autres cartes ici
+    { nickname: 'Médor', race: 'Chien', image: '../src/assets/images/animals/image-lions-2.jpeg', habitat: 'Enclos', score: 58, famille: 'Mammifères' },
+    { nickname: 'Titi', race: 'Lion', image: '.../src/assets/images/animals/image-lions-1.jpeg', habitat: 'Savane', score: 71, famille: 'Mammifères' },
+    { nickname: 'Loulou', race: 'Panthere', image: '../src/assets/images/animals/image-panda-1.jpeg', habitat: 'Enclos', score: 68, famille: 'Mammifères' },
+    { nickname: 'Pati', race: 'Panda', image: '../src/assets/images/animals/image-panda-1.jpeg', habitat: 'Enclos', score: 57, famille: 'Mammifères' },
+    { nickname: 'Tong', race: 'Dauphin', image: '../src/assets/images/animals/image-dauphin-1.png', habitat: 'Aquatique', score: 45, famille: 'Mammifères' },
+    { nickname: 'Bari', race: 'Elephant', image: '../src/assets/images/animals/image-elephants-1.png', habitat: 'Savane', score: 15, famille: 'Mammifères' },
+    { nickname: 'Robin', race: 'Tigre', image: '../src/assets/images/animals/image-tigre-2.jpeg', habitat: 'Jungle', score: 21, famille: 'Mammifères' },
+    { nickname: 'Matou', race: 'Zebre', image: '../src/assets/images/animals/image-zebres-1.png', habitat: 'Savane', score: 34 , famille: 'Mammifères'},
+    { nickname: 'Poireau', race: 'Crocodile', image: '../src/assets/images/animals/image-elephants-1.png', habitat: 'Marais', score: 61, famille: 'Reptiles' },
+    { nickname: 'Binera', race: 'Pingouin', image: '../src/assets/images/animals/image-ours.png', habitat: 'Aquatique', score: 24, famille: 'Oiseaux' },
+    { nickname: 'Croc-blanc', race: 'Loup', image: '../src/assets/images/animals/image-ours.png', habitat: 'Foret', score: 76, famille: 'Mammifères' },
+    { nickname: 'Chanteuse des marais', race: 'Grenouille', image: '../src/assets/images/animals/image-elephants-1.png', habitat: 'Marais', score: 55, famille: 'Amphibiens' },
+    { nickname: 'Rozo', race: 'Bouquetin', image: '../src/assets/images/animals/image-elephants-1.png', habitat: 'Montagne', score: 32, famille: 'Mammifères' },
+    { nickname: 'La-fouine', race: 'Marmotte', image: '../src/assets/images/animals/image-panda-1.jpeg', habitat: 'Montagne', score: 41, famille: 'Mammifères' },
+    { nickname: 'Vostros', race: 'Vautour', image: '../src/assets/images/animals/image-vautours-1.jpg', habitat: 'Montagne', score: 38, famille: 'Oiseaux' },
+    { nickname: 'Zira', race: 'Antilope', image: '../src/assets/images/animals/image-panda-1.jpeg', habitat: 'Plaine', score: 49, famille: 'Mammifères' },
+    { nickname: 'Ableti', race: 'Coyote', image: '../src/assets/images/animals/image-panda-1.jpeg', habitat: 'Plaine', score: 19, famille: 'Mammifères' },
+    { nickname: 'Albatros', race: 'Faucon', image: '../src/assets/images/animals/image-panda-1.jpeg', habitat: 'Plaine', score: 41, famille: 'Oiseaux' },
+    { nickname: 'Balard', race: 'Tigre', image: '../src/assets/images/animals/image-tigre-1.jpeg', habitat: 'Jungle', score: 41, famille: 'Poisson' },
+    { nickname: 'Papou', race: 'Perroquet', image: '../src/assets/images/animals/image-perroquet-1.jpeg', habitat: 'Cage', score: 71, famille: 'Oiseaux' },
+    { nickname: 'Blamas', race: 'Perroquet', image: '../src/assets/images/animals/image-perroquet-1.jpeg', habitat: 'Cage', score: 87, famille: 'Oiseaux' },
 ];
   
 let currentPage = 1;
-const itemsPerPage = 8;
+const itemsPerPage = 6;
 const totalPages = Math.ceil(data.length / itemsPerPage); //ajout
 const pageCountElement = document.getElementById('page-count');
 const paginationContainer = document.getElementById('pagination-container'); 
@@ -145,9 +171,32 @@ function displayCards(cards) {
             <img src="${item.image}" alt="${item.name}">
             <div class="container">
                 <h4><b>${item.name}</b></h4>
-                <p>${item.type}</p>
+                <p class="nameType">${item.type}</p>
                 <p>${item.description}</p>
             </div>
+            <!-- Début de la section Modal -->
+            <button type="button" class="trigger-button" data-bs-toggle="modal" data-bs-target="#animalsModal" onclick="showProductDetails('${item.type}')">
+              Voire les animaux
+            </button>
+            <!-- Modal -->
+              <div class="modal fade" id="animalsModal" tabindex="-1" aria-labelledby="animalsModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                  <div class="modal-header">
+                      <h5 class="modal-title fs-5" id="animalsModalLabel"></h5>
+                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body" >
+                    <div class="container-fluid" id="modal-body-content">
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                     <button type="button" class="trigger-button" data-bs-dismiss="modal">Fermer</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Fin de la section Modal -->
         `;
         container.appendChild(card);
     });
@@ -178,7 +227,6 @@ function filterAndSort() {
         container.innerHTML = '<span>Aucun résultat trouvé !</span>';
         paginationContainer.classList.remove('pagination-container');
         paginationContainer.classList.add('pagination-container-hidden');
-        //return;
     } else {
         paginationContainer.classList.remove('pagination-container-hidden');
         paginationContainer.classList.add("pagination-container");
@@ -211,6 +259,39 @@ document.getElementById('next').addEventListener('click', () => {
         filterAndSort();
 }
 });
+
+
+function showProductDetails(title) {
+  const modalTitle = document.getElementById('animalsModalLabel');
+  const modalBodyContent = document.getElementById('modal-body-content');
+  modalTitle.textContent = title;
+  modalBodyContent.innerHTML = '';
+
+  const animals = animalsDatas.filter(animal => animal.habitat === title);
+ 
+  animals.forEach(animal => {
+    const containerDiv = document.createElement('div');
+    containerDiv.className = 'row';
+
+    const photoDiv = document.createElement('div');
+    photoDiv.className = 'col-12 col-md-12';
+
+    const img = document.createElement('img');
+    img.src = animal.image;
+    img.className = 'photo';
+    img.alt = animal.nickname;
+
+    const nicknameDiv = document.createElement('div');
+    nicknameDiv.className = 'nickname';
+    nicknameDiv.innerText = animal.nickname;
+
+    photoDiv.appendChild(img);
+    photoDiv.appendChild(nicknameDiv);
+    containerDiv.appendChild(photoDiv);
+    modalBodyContent.appendChild(containerDiv);
+  }); 
+}
+
 
 // Afficher les cartes initialement
 displayCards(data);

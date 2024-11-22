@@ -12,7 +12,7 @@ body {
   }
   
 
-  /* The hero image */
+  /* Style de hero image */
   .hero-image {
     background: url("../images/hero_arcadia.jpeg");
     height: 70vh;
@@ -33,22 +33,26 @@ body {
   }
 
   .hero-button {
-    background: #f9f8f8;
+    background: #008000;
     border: none;
     padding: 10px;
     color: black;
-    box-shadow: 0.3s ease rgb(121, 121, 121) ;
-
+    font-size: 16px;
+    padding: 10px 20px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 4px 6px 1px rgba(0, 0, 0, 0.1); /* Ombre */
+    border-radius: 5px;
   }
   
   .hero-button:hover {
-    background: #008000;
+   background: white;  
     border: none;
     opacity: 1;
 
   }
   
-    /* The NavBar */
+    /* Style de la NavBar */
 
   .container-header {
     padding: 10px 0;
@@ -87,7 +91,26 @@ body {
   transition: border-bottom 0.3s ease; /* Transition pour la bordure */
 }
 
-  /* The card */
+
+.btn-general {
+  background: linear-gradient(to bottom, #a8e063, #56ab2f); /* Gradient vert apaisant */
+  border: none;
+  color: black;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px 1px rgba(0, 0, 0, 0.1); /* Ombre */
+}
+
+.btn-general:hover {
+  color: white;  
+  border: none;
+ }
+
+  /* style pour l'affichage des cartess */
 
   .card-container {
     display: grid;
@@ -140,16 +163,6 @@ body {
   cursor: pointer;
 }
 
-  
-  footer {
-    background-color: #333;
-    color: #fff;
-  }
-  
-  footer .social-icons img {
-    width: 24px;
-  }
-  
 
 .feature {
   text-align: left;
@@ -205,79 +218,76 @@ body {
   text-align: center;
 }
 
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
 
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-      }
+.b-example-divider {
+  width: 100%;
+  height: 3rem;
+  background-color: rgba(0, 0, 0, .1);
+  border: solid rgba(0, 0, 0, .15);
+  border-width: 1px 0;
+  box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+}
 
-    
+.b-example-vr {
+  flex-shrink: 0;
+  width: 1.5rem;
+  height: 100vh;
+}
 
-      .b-example-divider {
-        width: 100%;
-        height: 3rem;
-        background-color: rgba(0, 0, 0, .1);
-        border: solid rgba(0, 0, 0, .15);
-        border-width: 1px 0;
-        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
-      }
+.bi {
+  vertical-align: -.125em;
+  fill: currentColor;
+}
 
-      .b-example-vr {
-        flex-shrink: 0;
-        width: 1.5rem;
-        height: 100vh;
-      }
+.nav-scroller {
+  position: relative;
+  z-index: 2;
+  height: 2.75rem;
+  overflow-y: hidden;
+}
 
-      .bi {
-        vertical-align: -.125em;
-        fill: currentColor;
-      }
+.nav-scroller .nav {
+  display: flex;
+  flex-wrap: nowrap;
+  padding-bottom: 1rem;
+  margin-top: -1px;
+  overflow-x: auto;
+  text-align: center;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
 
-      .nav-scroller {
-        position: relative;
-        z-index: 2;
-        height: 2.75rem;
-        overflow-y: hidden;
-      }
+.btn-bd-primary {
+  --bd-violet-bg: #712cf9;
+  --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
 
-      .nav-scroller .nav {
-        display: flex;
-        flex-wrap: nowrap;
-        padding-bottom: 1rem;
-        margin-top: -1px;
-        overflow-x: auto;
-        text-align: center;
-        white-space: nowrap;
-        -webkit-overflow-scrolling: touch;
-      }
+  --bs-btn-font-weight: 600;
+  --bs-btn-color: var(--bs-white);
+  --bs-btn-bg: var(--bd-violet-bg);
+  --bs-btn-border-color: var(--bd-violet-bg);
+  --bs-btn-hover-color: var(--bs-white);
+  --bs-btn-hover-bg: #6528e0;
+  --bs-btn-hover-border-color: #6528e0;
+  --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+  --bs-btn-active-color: var(--bs-btn-hover-color);
+  --bs-btn-active-bg: #5a23c8;
+  --bs-btn-active-border-color: #5a23c8;
+}
 
-      .btn-bd-primary {
-        --bd-violet-bg: #712cf9;
-        --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+.bd-mode-toggle {
+  z-index: 1500;
+}
 
-        --bs-btn-font-weight: 600;
-        --bs-btn-color: var(--bs-white);
-        --bs-btn-bg: var(--bd-violet-bg);
-        --bs-btn-border-color: var(--bd-violet-bg);
-        --bs-btn-hover-color: var(--bs-white);
-        --bs-btn-hover-bg: #6528e0;
-        --bs-btn-hover-border-color: #6528e0;
-        --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
-        --bs-btn-active-color: var(--bs-btn-hover-color);
-        --bs-btn-active-bg: #5a23c8;
-        --bs-btn-active-border-color: #5a23c8;
-      }
-
-      .bd-mode-toggle {
-        z-index: 1500;
-      }
-
-      .bd-mode-toggle .dropdown-menu .active .bi {
-        display: block !important;
-      }
+.bd-mode-toggle .dropdown-menu .active .bi {
+  display: block !important;
+}
 
 
 /* CSS pour la section Statistique */
@@ -289,7 +299,6 @@ body {
 
 .row-stats {margin: -30px -15px;}
 
-/* Clear floats after the columns */
 .row-stats:after {
   content: "";
   display: table;
@@ -297,7 +306,7 @@ body {
 }
 
 
-/* Style the counter cards */
+/* Style pour les carte de statistiques */
 .card-stats {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   padding: 16px;
@@ -308,52 +317,56 @@ body {
 
 .fa-stats {font-size:50px;}
 
-/* Style the buttons that are used to open and close the accordion panel */
+/* Style pour les boutons du panneau accordéon */
 .accordion {
   background-color: #eee;
   color: #444;
   cursor: pointer;
   padding: 18px;
   width: 100%;
+  border-radius: 5px;
   text-align: left;
   border: none;
   outline: none;
-  transition: 0.4s;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-.active, .accordion:hover {
-  background-color: #ccc;
+.active-accordion, .accordion:hover {
+  color: white;
+  transform: translateY(-10px);
+  background: linear-gradient(to bottom, #a8e063, #56ab2f); /* Gradient vert apaisant */
+
+}
+
+
+
+.accordion:hover {
+  background-color: #008000;
+  /*background-color: #ccc; */
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
 }
 
 /* Style the accordion panel. Note: hidden by default */
 .panel {
   padding: 0 18px;
+  width: 100%;
+  text-align: left;
   background-color: white;
   display: none;
   overflow: hidden;
 }
 
-/* Bouton pour remonter en haut de la page 
+/* FOOTER
 -------------------------------------------------- */
-#topPage {
-  display: none; /* Hidden by default */
-  position: fixed; /* Fixed/sticky position */
-  bottom: 20px; /* Place the button at the bottom of the page */
-  right: 30px; /* Place the button 30px from the right */
-  z-index: 99; /* Make sure it does not overlap */
-  border: none; /* Remove borders */
-  outline: none; /* Remove outline */
-  background-color:#006400 ; /* Set a background color */
-  color: white; /* Text color */
-  cursor: pointer; /* Add a mouse pointer on hover */
-  padding: 15px; /* Some padding */
-  border-radius: 10px; /* Rounded corners */
-  font-size: 18px; /* Increase font size */
+footer {
+  background-color: #333;
+  color: #fff;
 }
 
-#topPage:hover {
-  background-color: #008000; /* Add a dark-grey background on hover */
+footer .social-icons img {
+  width: 50px;
 }
       
 /* RESPONSIVE CSS

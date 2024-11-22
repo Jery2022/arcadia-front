@@ -343,7 +343,6 @@ body {
 
 .accordion:hover {
   background-color: #008000;
-  /*background-color: #ccc; */
   transform: translateY(-10px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
 }

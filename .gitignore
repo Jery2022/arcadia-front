@@ -4,4 +4,5 @@
 /node_modules/
 
 test*.*
+*copy.*
 scripts/config.js

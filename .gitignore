@@ -1,5 +1,7 @@
 /vendor/
 /img-test/
 /include_html/
+/node_modules/
 
 test*.*
+scripts/config.js

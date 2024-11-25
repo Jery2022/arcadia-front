@@ -30,30 +30,36 @@
     </div>
   </header>
   <main class="container">
-    <div class="container col-xl-10 col-xxl-8 px-4 py-5">
+    <div class="container col-xl-10 col-xxl-10 px-4 py-5">
       <div class="row align-items-center g-lg-5 py-5">
-        <!--div class="col-lg-7 text-center text-lg-start">
-        </!--div -->
         <div class="col-md-10 mx-auto col-lg-5">
-          <h1 class="display-4 fw-bold lh-1 text-body-emphasis mb-3">Login</h1>
-          <p class="lead">Connectez-vous pour accéder à votre compte.</p>
-          <form class="p-4 p-md-5 border rounded-3 bg-body-tertiary">
-            <div class="form-floating mb-3">
-              <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-              <label for="floatingInput">Email :</label>
+          <h1 class="display-4 fw-bold lh-1 text-body-emphasis text-center pb-5">Login</h1>
+          <p class="lead">Connectez-vous et accéder à votre compte.</p>
+          <form class="p-4 p-md-5 border rounded-3 bg-body-tertiary needs-validation" id="loginForm" novalidate>
+            <div class="form-floating mb-3" id="emailContainer"> 
+              <input type="email" class="form-control" id="validationCustom01" placeholder="name@example.com" required>
+              <label for="validationCustom01" class="form-label">Email</label>
+              <div class="valid-feedback" >Cool !</div>
+              <div id="emailFeedBack"></div>
             </div>
-            <div class="form-floating mb-3">
-              <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-              <label for="floatingPassword">Password :</label>
+            <div class="form-floating mb-3" id="passwordContainer">
+              <input type="password" class="form-control" id="validationCustom02" placeholder="Password" required>
+              <label for="validationCustom02">Password </label>
+              <div class="valid-feedback" >Super ! </div>
+              <div id="passwordFeedBack"></div>
             </div>
             <div class="checkbox mb-3">
-              <label>
-                <input type="checkbox" value="remember-me"> Se souvenir de moi
-              </label>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                <label class="form-check-label" for="invalidCheck">
+                  J'accepte les conditions d'utilisation
+                </label>
+                <div class="invalid-feedback">
+                  Vous devez accepter les conditions avant de soumettre.
+                </div>
+              </div>
             </div>
             <button class="w-100 btn btn-lg btn-primary" type="submit">Connexion</button>
-            <hr class="my-4">
-            <small class="text-body-secondary">En cliquant ici, vous acceptez nos conditions d'utilisation.</small>
           </form>
         </div>
       </div>

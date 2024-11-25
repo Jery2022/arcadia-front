@@ -36,6 +36,49 @@ for (i = 0; i < acc.length; i++) {
   });
 }
 
+/***  
+ * Code pour la validation de formulaire de contact 
+ ***/
+
+(() => { 
+
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  const forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.from(forms).forEach(form => {
+    form.addEventListener('submit', event => {
+      if (!form.checkValidity()) {
+        event.preventDefault()
+        event.stopPropagation()
+      }
+
+      form.classList.add('was-validated')
+    }, false)
+  })
+
+ })() 
+
+
+
+
+/***  
+ * Code pour la validation de formulaire de Login 
+ ***/
+
+function validateEmail() {
+
+  const container = document.getElementById('emailContainer');
+  const validFeedback = document.getElementById('valideFeedBack');  
+  const email = document.forms["loginForm"]["email"].value;
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const card = document.createElement('div');
+
+  validFeedback.innerHTML = ''; // Réinitialiser le conteneur
+  
+}
 
 
 // Code pour les statistiques interactives
@@ -44,26 +87,19 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
 
-// Bouton de retour en haut de la page
-let mybutton = document.getElementById("topPage");
-
-window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    mybutton.style.display = "block";
-  } else {
-    mybutton.style.display = "none";
-  }
-}
-
-function topFunction() {
-  document.body.scrollTop = 0;  
-  document.documentElement.scrollTop = 0; }
-
-
-// Code pour la validation de formulaire de contact
-function validateForm() {
+/*** 
+ *  Code pour la validation de formulaire de contact 
+ ***/
+function validateFormContact() {
+  
+  const forms = document.querySelectorAll('.contactForm');
+  forms.addEventListener('submit', event => {
+    event.preventDefault();
+    event.stopPropagation();
+    alert();
+  console.log(forms.length);
+  });
+/*
   const name = document.forms["contactForm"]["name"].value;
   const objet = document.forms["contactForm"]["objet"].value;
   const email = document.forms["contactForm"]["email"].value;
@@ -81,7 +117,7 @@ function validateForm() {
       return false;
   }
 
-  return true;
+  return true;*/
 }
 
 // Code pour changer dynamiquement le focus du menu actif lorsque l'on clique sur le lien d'un élément de menu

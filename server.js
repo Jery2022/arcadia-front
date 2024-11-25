@@ -2,6 +2,7 @@ import express from 'express';
 import { createConnection } from 'mysql';
 import { fileURLToPath } from 'url';
 import path from 'path';
+import  config  from './scripts/config.js';
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -15,10 +16,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Configurer la connexion à la base de données MariaDB
 const db = createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: '',
-  database: 'jery_zoo_arcadia;'
+  host: config.DB_Host,
+  user: config.DB_User,
+  password: config.DB_Password,
+  port: config.DB_Port, 
+  database: config.DB_Name
 });
 
 db.connect((err) => {
@@ -29,8 +31,52 @@ db.connect((err) => {
   console.log('Connected to the MySQL database.');
 });
 
-/*
+/***
+ * 
+ * Les principales routes de l'application
+ * 
+ ***/
 
+// Route pour la page d'accueil
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'index.html'));
+});
+
+//route pour la page about
+app.get('/about', (req, res) => {
+  res.sendFile(path.join(__dirname, 'about.html'));
+});
+
+
+//route pour la page services
+app.get('/services', (req, res) => {
+  res.sendFile(path.join(__dirname, 'services.html'));
+});
+
+//route pour la page habitats
+app.get('/habitats', (req, res) => {
+  res.sendFile(path.join(__dirname, 'habitats.html'));
+});
+
+//route pour la page galerie
+app.get('/galerie', (req, res) => {
+  res.sendFile(path.join(__dirname, 'galerie.html'));
+});
+
+//route pour la page contact
+app.get('/contact', (req, res) => {
+  res.sendFile(path.join(__dirname, 'contact.html'));
+});
+
+// Route pour la page login
+app.get('/login', (req, res) => {
+  res.sendFile(path.join(__dirname, 'login.html'));
+});
+
+
+
+
+/*
 // Route pour obtenir et afficher les images
 app.get('/', (req, res) => {
   db.query('SELECT url FROM images;', (err, rows) => {

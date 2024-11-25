@@ -6,7 +6,7 @@ const connection = createConnection({
   host: config.DB_Host,
   user: config.DB_User,
   password: config.DB_Password,
-  port: config.DB_Port, // Assurez-vous que le port est correct
+  port: config.DB_Port, 
   database: config.DB_Name
 });
   

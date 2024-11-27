@@ -1,11 +1,26 @@
 import express from 'express';
 import { createConnection } from 'mysql';
+import pkg from 'body-parser';
+import session from 'express-session';
 import { fileURLToPath } from 'url';
 import path from 'path';
 import  config  from './scripts/config.js';
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+//const { bodyParser } = pkg;
+
+// Configuration des sessions
+app.use(session({
+  secret: 'secret',
+  resave: false,
+  saveUninitialized: true,
+  cookie: { secure: false } // Mettre à true en production
+}));
+
+// Configuration de body-parser pour récupérer les données POST et analyser les données des formulaires
+//app.use(bodyParser.urlencoded({ extended: false }));
+
 
 // Définir __dirname pour les modules ES
 const __filename = fileURLToPath(import.meta.url);
@@ -72,6 +87,19 @@ app.get('/contact', (req, res) => {
 app.get('/login', (req, res) => {
   res.sendFile(path.join(__dirname, 'login.html'));
 });
+
+// Route pour la page de l'authentification
+app.post('./php/authentification', (req, res) => {
+/*
+  if (req.body.username === 'admin' && req.body.password === 'password') {
+    req.session.authenticated = true;
+    res.redirect('/dashboard');
+  } else {
+    res.redirect('/login');
+  }
+    */
+   alert('test');
+}); 
 
 
 

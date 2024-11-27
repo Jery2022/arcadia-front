@@ -28,7 +28,22 @@
   margin-bottom: 20px;
 }
 
-/* Style the buttons */
+/* Style the filters buttons */
+
+.filter-container {
+  max-width: 300px;
+}
+
+.filter-container select{
+  width: 150px;
+  padding: 10px 15px;
+  background-color: white;
+  cursor: pointer;
+  border: #666 1px solid; 
+
+}
+
+
 .filter-btn {
   border: none;
   outline: none;
@@ -48,6 +63,20 @@
   color: white;
 }
 
+.search-container {
+  max-width: 300px;
+}
+
+.search-container input[type=text] {
+  width: 100%;
+  padding: 8px 15px;
+  background-color: white;
+  cursor: pointer;
+  border: #666 1px solid; 
+}
+
+
+/* Style the search input field */
 .btn-search {
   background-color: #007bff;
   color: white;

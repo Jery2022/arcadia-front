@@ -16,36 +16,27 @@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item active"><a class="nav-link" href="index.html">Accueil</a></li>
-            <li class="nav-item"><a class="nav-link" href="about.html">À Propos</a></li>
-            <li class="nav-item"><a class="nav-link" href="services.html">Nos Services</a></li>
-            <li class="nav-item"><a class="nav-link" href="habitats.html">Nos Habitats</a></li>
-            <li class="nav-item"><a class="nav-link" href="galerie.html">Nos Animaux</a></li>
-            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-          </ul>
-        </div>
       </nav>
     </div>
   </header>
   <main class="container">
-    <div class="container col-xl-10 col-xxl-10 px-4 py-5">
+    <div class="container col-xl-10 col-xxl-10 px-2 py-2">
       <div class="row align-items-center g-lg-5 py-5">
         <div class="col-md-10 mx-auto col-lg-5">
           <h1 class="display-4 fw-bold lh-1 text-body-emphasis text-center pb-5">Login</h1>
           <p class="lead">Connectez-vous et accéder à votre compte.</p>
-          <form class="p-4 p-md-5 border rounded-3 bg-body-tertiary needs-validation" id="loginForm" novalidate>
+          <form class="p-5 p-md-5 border rounded-3 bg-body-tertiary needs-validation" id="loginForm" 
+            name="loginForm" action="../../arcadia-backend/public/dashboard.php" method="post" onsubmit="validateFormLogin()"  novalidate>
             <div class="form-floating mb-3" id="emailContainer"> 
-              <input type="email" class="form-control" id="validationCustom01" placeholder="name@example.com" required>
+              <input type="email" class="form-control" id="validationCustom01" placeholder="email" required>
               <label for="validationCustom01" class="form-label">Email</label>
-              <div class="valid-feedback" >Cool !</div>
+              <div class="valid-feedback" >ok !</div>
               <div id="emailFeedBack"></div>
             </div>
             <div class="form-floating mb-3" id="passwordContainer">
-              <input type="password" class="form-control" id="validationCustom02" placeholder="Password" required>
+              <input type="password" class="form-control" id="validationCustom02" placeholder="password" required>
               <label for="validationCustom02">Password </label>
-              <div class="valid-feedback" >Super ! </div>
+              <div class="valid-feedback" >Ok !</div>
               <div id="passwordFeedBack"></div>
             </div>
             <div class="checkbox mb-3">
@@ -59,7 +50,10 @@
                 </div>
               </div>
             </div>
-            <button class="w-100 btn btn-lg btn-primary" type="submit">Connexion</button>
+            <div class="p-5  p-md-5"> 
+              <button class="w-100 btn btn-lg btn-primary mt-2 " type="submit">Connexion</button>
+              <button class="w-100 btn btn-lg btn-primary  mt-2" type="submit">Annuler</button>
+            </div>
           </form>
         </div>
       </div>

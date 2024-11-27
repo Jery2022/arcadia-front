@@ -1,7 +1,7 @@
 {
-    "name": "jewom/arcadia-front",
+    "name": "arcadia/arcadia-front",
     "description": "Site d'information et de gestion d'un zoo animalier",
-    "type": "project",
+    "type": "projet",
     "require": {
         "phpmailer/phpmailer": "^6.9"
     },

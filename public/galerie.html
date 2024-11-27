@@ -27,6 +27,9 @@
             <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
           </ul>
         </div>
+        <div class="d-md-flex justify-content-md-end">
+          <a class="btn btn-primary btn-md me-md-2" href="login.html" role="button">Connectez-vous</a>
+        </div>
       </nav>
     </div>
   </header>
@@ -42,14 +45,16 @@
         <button class="filter-btn" onclick="filterSelection('Oiseaux')"> Oiseaux</button>
         <button class="filter-btn" onclick="filterSelection('Amphibien')"> Amphibien</button>
       </div>
-      <div class="filter-container m-3" >
+      <!-- zonr Sort -->
+      <div class="filter-container m-3" >Trier par :
         <select id="sort">
-            <option value="name">Trier par nom</option>
-            <option value="race">Trier par race</option>
-            <option value="famille">Trier par famille</option>
+            <option value="name">nom</option>
+            <option value="race">race</option>
+            <option value="famille">famille</option>
         </select>
      </div>
-      <div class="d-flex justify-content-between align-items-center" >
+      <!-- zonr Search -->
+      <div class="search-container d-flex justify-content-between align-items-center" >
         <input type="text" id="search" name="search" placeholder="Rechercher...">
       </div>
    </div>
@@ -99,5 +104,6 @@
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
   <script src="../src/js/main.js"></script>   
+  <script src="../src/js/galerie.js"></script>   
 </body>
 </html>

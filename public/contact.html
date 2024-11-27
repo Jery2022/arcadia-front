@@ -26,12 +26,15 @@
             <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
           </ul>
         </div>
+        <div class="d-md-flex justify-content-md-end">
+          <a class="btn btn-primary btn-md me-md-2" href="login.html" role="button">Connectez-vous</a>
+        </div>
       </nav>
     </div>
   </header>
   
   <main class="container">
-    <div class="container col-xl-10 col-xxl-8 px-4 py-5">
+    <div class="container col-xl-10 col-xxl-10 px-4 py-5">
       <div class="row align-items-center g-lg-5 py-5">
         <div class="col-lg-7 text-center text-lg-start">
           <h1 class="display-4 fw-bold lh-1 text-body-emphasis mb-3">Contact</h1>
@@ -39,29 +42,28 @@
         </div>
         <div class="col-md-10 mx-auto col-lg-5">
           <form class="p-4 p-md-5 border rounded-3 bg-body-tertiary" 
-              name="contactForm" action="send_mail.php" method="post" onsubmit="return validateForm()">
+              name="contactForm" action="" method="post" onsubmit="validateFormContact()" novalidate>
             <div class="form-floating mb-3">
               <input type="text" class="form-control" id="floatingInput" placeholder="name">
-              <label for="floatingInput">Nom :</label>
+              <label for="floatingInput">Nom </label>
+              <div id="nomFeedBack"></div>
             </div>
             <div class="form-floating mb-3">
-              <input type="text" class="form-control" id="floatingInput" placeholder="objet">
-              <label for="floatingInput">Objet :</label>
+              <input type="text" class="form-control" id="floatingInput" placeholder="objet" required>
+              <label for="floatingInput">Objet </label>
+              <div id="objetFeedBack"></div>
             </div>
             <div class="form-floating mb-3">
-              <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-              <label for="floatingInput">Email :</label>
+              <input type="email" class="form-control" id="floatingEmail" placeholder="email" required>
+              <label for="floatingEmail" class="form-label">Email </label>
+              <div id="emailFeedBack"></div>
             </div>
-            <div class="form-floating mb-3">
-              <textarea class="form-control" id="floatingTextarea" placeholder="message"></textarea>
-              <label for="floatingTextarea">Message :</label>
+            <div class="form-floating mb-3" id="messageContainer">
+              <textarea class="form-control" id="floatingMessage" placeholder="message" required></textarea>
+              <label for="floatingMessage" class="form-label">Message </label>
+              <div id="messageFeedBack"></div>
             </div>
-            <div class="checkbox mb-3">
-              <label>
-                <input type="checkbox" value="remember-me"> Se souvenir de moi
-              </label>
-            </div>
-            <button class="w-100 btn btn-lg btn-primary" type="submit">Envoyer</button>
+            <button class="w-100 btn btn-lg btn-primary" type="submit"  >Envoyer</button>
             <hr class="my-4">
             <small class="text-body-secondary">En cliquant ici, vous acceptez nos conditions d'utilisation.</small>
           </form>

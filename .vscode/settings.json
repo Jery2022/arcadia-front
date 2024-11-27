@@ -6,13 +6,13 @@
                 "enableSsl": "Disabled"
             },
             "previewLimit": 50,
-            "server": "localhost",
+            "server": "mysql-ejyr.alwaysdata.net",
             "port": 3306,
-            "driver": "MariaDB",
-            "name": "Arcadia",
+            "driver": "MySQL",
+            "name": "Arcadia-alwawsdata",
             "database": "ejyr_zoo_arcadia",
-            "username": "root",
-            "password": ""
+            "username": "ejyr_admin_arcad",
+            "askForPassword": true
         },
         {
             "mysqlOptions": {
@@ -20,12 +20,12 @@
                 "enableSsl": "Disabled"
             },
             "previewLimit": 50,
-            "server": "mysql-ejyr.alwaysdata.net",
+            "server": "localhost",
             "port": 3306,
-            "driver": "MySQL",
-            "name": "Arcadia-alwawsdata",
-            "database": "ejyr_zoo_arcadia",
-            "username": "ejyr_admin_arcad",
+            "driver": "MariaDB",
+            "name": "Arcadia",
+            "database": "jery_zoo_arcadia",
+            "username": "jose",
             "askForPassword": true
         }
     ]
